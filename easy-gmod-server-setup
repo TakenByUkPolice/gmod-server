@@ -1,0 +1,40 @@
+>1 Download steamcmd from <https://developer.valvesoftware.com/wiki/SteamCMD>.
+>2 Once downloaded extract it to whatever drive you want.
+>3 Open it.
+>4 Once opened type login anonymous.
+>5 Then type force_dir_install <X:\GMOD\>
+>6 Then Type app_update 4020
+>7 Wait.
+>8 When it's done navigate to the <<X:\GMOD\>> Folder. 
+>9 Open garrysmod. 
+>10 Open cfg.
+>11 Copy paste this in your server.cfg file.
+>12                             hostname "Name Of Said Server"
+                                rcon_password "RCON Pass Of Said Server"
+                                sv_password "IF YOU WANT YOUR SERVER TO BE PUBLIC DELETE THIS LINE"
+>13 Then in mount.cfg delete the // behind cstrike.
+>14 And replace the dir of cstrike with <X:\GMOD\cstrike\>
+>15 Then navigate to GMOD 
+>16 Create a .bat file
+>17 Put this code into it: 
+-@echo off
+-cls
+-echo Protecting srcds from crashes...
+-echo If you want to close srcds and this script, close the srcds window and type Y depending on your language followed by Enter.
+-title srcds.com Watchdog
+-:srcds
+-echo (%time%) srcds started.
+-start /wait srcds.exe -console -game garrysmod +gamemode darkrp +map gm_construct +maxplayers 16
+-echo (%time%) WARNING: srcds closed or crashed, restarting.
+-goto srcds
+>18 Run the .bat file. 
+>19 Open Garry's Mod
+>20 Press multiplayer
+>21 Press Local Network
+>22 You should see your server there.
+>23 Play on it until your heart is content.
+
+
+
+
+Just to clear things up the X:\ Dir is whatever drive you choose. and don't put the > < in there either, It will just cause errors and render your server useless.
